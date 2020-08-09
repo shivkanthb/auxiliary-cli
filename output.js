@@ -13,7 +13,6 @@ const download = async (url, path) => {
     request(url)
     .pipe(fs.createWriteStream(path))
     .on('finish', () => {
-      console.log('download complete');
       resolve();
     })
     .on('error', (error) =>  {

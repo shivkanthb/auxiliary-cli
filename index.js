@@ -24,6 +24,9 @@ module.exports = () => {
     case 'version':
       require('./cmds/version')(args)
       break
+    case 'iw':
+      require('./cmds/intern')(args)
+      break
     default:
       let modified_args = ['/a'].concat(args._);
       args._ = modified_args
