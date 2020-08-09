@@ -36,7 +36,7 @@ npm install auxcli -g
 aux assist <user input>
 ```
 Displays the cli command for doing the task requested by the user
-the `assist` flag is optional. It can work without it too!
+the `assist` flag is optional. It can work without it too! The generated command is copied to your clipboard too. So cmd+v to paste and execute 🚀
 
 ![samples](https://auxiliarytoolsassets.s3-us-west-1.amazonaws.com/Screen+Shot+2020-08-09+at+12.44.45+PM.png)
 
