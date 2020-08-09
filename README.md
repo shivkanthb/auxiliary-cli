@@ -20,7 +20,7 @@ aux delete readme.md from git
 ```
 Feel free to try out any kind of cli commands. GPT-3 does really good!
 
-![video demo link] (https://auxiliarytoolsassets.s3-us-west-1.amazonaws.com/aux_gpt_demo_cmp.mp4)
+![video demo link](https://auxiliarytoolsassets.s3-us-west-1.amazonaws.com/aux_gpt_demo_cmp.mp4)
 
 
 ### Getting Started
@@ -45,7 +45,7 @@ the `assist` flag is optional. It can work without it too!
 ```
 aux connect wiki
 ```
-This will prompt for a directory for your intern wiki search
+This will prompt for a directory for your intern wiki search. In the future, I plan to integrate with api's directly. 
 ![aux connect wiki](https://auxiliarytoolsassets.s3-us-west-1.amazonaws.com/Screen+Shot+2020-08-09+at+12.35.31+PM.png)
 
 
