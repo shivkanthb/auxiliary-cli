@@ -1,0 +1,22 @@
+{
+  "name": "auxcli",
+  "version": "1.0.0",
+  "description": "Auxiliary cmd line tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "aux": "bin/aux"
+  },
+  "author": "Shiv",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clipboardy": "^2.3.0",
+    "line-reader": "^0.4.0",
+    "minimist": "^1.2.5",
+    "ora": "^5.0.0",
+    "request": "^2.88.2"
+  }
+}
