@@ -1,7 +1,7 @@
 const request = require('../utils/request');
 const { consoleOutput, consoleError } = require('../output');
 const ora = require('ora');
-const spinner = ora('🧠..')
+const spinner = ora('Fetching..')
 
 const API_URL = 'https://pioneer-copilot-api.herokuapp.com/api/davinci';
 
