@@ -4,16 +4,19 @@ const exec = util.promisify(require('child_process').exec);
 const child_process = require('child_process')
 const editor = 'less';
 
-const iw_path = '/Users/shiv/Documents/internal_docs';
-
 
 const readFilePaths  = (response) => {
   let lines = response.trim().split('\n');
   return lines;
 }
 
-module.exports = async (args) => {
+module.exports = async (args, db) => {
   let user_input = args._.slice(1).join(' ');
+  let iw_path = db.getWikiPath();
+  if (!iw_path) {
+    console.log('Internal wiki directory path is empty! connect one with `aux connect wiki`');
+    return;
+  }
   let exec_str = `grep -Ril '${user_input}' ${iw_path}`;
   let results = null;
   try {

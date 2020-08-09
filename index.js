@@ -1,4 +1,7 @@
 const minimist  = require('minimist');
+const Storage =  require('./storage').Database;
+let db = new Storage();
+
 
 module.exports = () => {
   const cmdArgs = process.argv.slice(2);
@@ -25,7 +28,10 @@ module.exports = () => {
       require('./cmds/version')(args)
       break
     case 'iw':
-      require('./cmds/intern')(args)
+      require('./cmds/intern')(args, db)
+      break
+    case 'connect':
+      require('./cmds/connect')(args, db)
       break
     default:
       let modified_args = ['/a'].concat(args._);
