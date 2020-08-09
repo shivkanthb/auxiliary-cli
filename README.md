@@ -20,7 +20,7 @@ aux delete readme.md from git
 ```
 Feel free to try out any kind of cli commands. GPT-3 does really good!
 
-![video demo link](https://auxiliarytoolsassets.s3-us-west-1.amazonaws.com/aux_gpt_demo_cmp.mp4)
+[video demo link](https://auxiliarytoolsassets.s3-us-west-1.amazonaws.com/aux_gpt_demo_cmp.mp4)
 
 
 ### Getting Started
