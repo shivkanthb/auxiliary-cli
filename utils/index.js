@@ -1,4 +1,7 @@
 const fs = require('fs');
+const os = require('os');
+
+
 const dbdir = os.homedir() + '/auxdb';
 
 
