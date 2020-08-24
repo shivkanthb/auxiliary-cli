@@ -18,7 +18,7 @@ module.exports = () => {
   }
   
   switch (cmd) {
-    case '/a':
+    case 'assist':
       require('./cmds/assist')(args)
       break;
     case 'help':
@@ -34,7 +34,7 @@ module.exports = () => {
       require('./cmds/connect')(args, db)
       break
     default:
-      let modified_args = ['/a'].concat(args._);
+      let modified_args = ['assist'].concat(args._);
       args._ = modified_args
       require('./cmds/assist')(args)
   }

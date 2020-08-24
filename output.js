@@ -3,8 +3,7 @@ const fs = require('fs');
 const os = require('os');
 const request = require('request');
 
-let dbdir = os.homedir() + '/auxdb';
-let asciipath =  os.homedir() + '/auxdb/ascii.txt';
+const asciipath =  os.homedir() + '/auxdb/ascii.txt';
 const ASCII_URL = "https://auxiliarytoolsassets.s3-us-west-1.amazonaws.com/ascii.txt";
 
 
@@ -21,9 +20,8 @@ const download = async (url, path) => {
   });
 }
 
-async function createDbFolderIfNotExist() {
-  if (!fs.existsSync(dbdir)) {
-    fs.mkdirSync(dbdir)
+async function downloadAsciiIfNotExist() {
+  if (!fs.existsSync(asciipath)) {
     await download(ASCII_URL, asciipath);
   }
 }
@@ -36,7 +34,7 @@ function pbcopy(data) {
 
 const outputHelpMenu = async (menus, subCmd) => {
 
-  await createDbFolderIfNotExist();
+  await downloadAsciiIfNotExist();
 
   const data = fs.readFileSync(asciipath, {encoding:'utf8', flag:'r'}); 
   console.log(data); // printing the cool ascii art
